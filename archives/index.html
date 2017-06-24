@@ -36,6 +36,17 @@
     
     
     
+        <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?dbf526c3d05afee81f4f60d1bdd6b651";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    
 
 
 </head>
@@ -349,46 +360,7 @@
             &copy; 2017 高峰<br>
             豫ICP备16014317号-1
         </div>
-        <script src="//cdn1.lncld.net/static/js/2.5.0/av-min.js"></script>
-        <script>
-            var APP_ID = '6nKqbWUW0dR7Vm8w4Jm1GsIB-gzGzoHsz';
-            var APP_KEY = '7b3mAi3JKnhChMCWrvL5HJYG';
-            AV.init({
-                appId: APP_ID,
-                appKey: APP_KEY
-            });
-            // 显示次数
-            function showTime(Counter) {
-                var query = new AV.Query("Counter");
-                if($(".leancloud_visitors").length > 0){
-                    var url = $(".leancloud_visitors").attr('id').trim();
-                    // where field
-                    query.equalTo("words", url);
-                    // count
-                    query.count().then(function (number) {
-                        // There are number instances of MyClass where words equals url.
-                        $(document.getElementById(url)).text(number?  number : '--');
-                    }, function (error) {
-                        // error is an instance of AVError.
-                    });
-                }
-            }
-            // 追加pv
-            function addCount(Counter) {
-                var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'icafebolger.com';
-                var Counter = AV.Object.extend("Counter");
-                var query = new Counter;
-                query.save({
-                    words: url
-                }).then(function (object) {
-                })
-            }
-            $(function () {
-                var Counter = AV.Object.extend("Counter");
-                addCount(Counter);
-                showTime(Counter);
-            });
-        </script>
+
     </div>
 </footer>
         
