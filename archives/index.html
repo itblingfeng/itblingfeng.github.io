@@ -86,19 +86,7 @@
             
             <div id="search-form-wrap">
 
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
-    <button type="submit" class="search-form-submit"></button>
-</form>
-<script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:www.blingfeng.cn ' + keyword;
-        return false;
-    });
-})(jQuery);
-</script>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://www.blingfeng.cn"></form>
 
 </div>
         </div>
@@ -119,19 +107,7 @@
                 
                 <td>
                     
-    <form class="search-form" method="GET" action="https://www.baidu.com/s?">
-    <input name="wd" type="text" class="search-form-input" placeholder="搜索" />
-    <button type="submit" class="search-form-submit"></button>
-</form>
-<script>
-(function ($) {
-    $('.search-form').on('submit', function (e) {
-        var keyword = $('.search-form-input[name="wd"]').val();
-        window.location = 'https://www.baidu.com/s?wd=site:www.blingfeng.cn ' + keyword;
-        return false;
-    });
-})(jQuery);
-</script>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><input type="hidden" name="sitesearch" value="http://www.blingfeng.cn"></form>
 
                 </td>
             </tr>
@@ -213,6 +189,9 @@
                 <h1 class="title">2017</h1>
             </div>
         
+    <span id="busuanzi_container_page_pv">
+   本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
         <div class="timeline-row">
             <span class="node"></span>
             <div class="content">
@@ -239,6 +218,9 @@
             </div>
         </div>
     
+    <span id="busuanzi_container_page_pv">
+   本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</span>
         <div class="timeline-row">
             <span class="node"></span>
             <div class="content">
@@ -360,7 +342,7 @@
         <div id="footer-info" class="inner">
             &copy; 2017 高峰<br>
             <span id="busuanzi_container_site_uv">
-  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  本站访客数<span id="busuanzi_value_site_uv" style="color:yellow"></span>人次
 </span><br>
             豫ICP备16014317号-1
         </div>
