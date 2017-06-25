@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.blingfeng.cn/category/index-1.html</loc>
+    
+    <lastmod>2017-06-25T11:34:15.508Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.blingfeng.cn/2017/06/24/music/</loc>
     
     <lastmod>2017-06-25T11:11:16.752Z</lastmod>
@@ -23,20 +30,6 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/tags/index.html</loc>
-    
-    <lastmod>2017-06-24T04:39:37.345Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.blingfeng.cn/categories/index.html</loc>
-    
-    <lastmod>2017-06-24T04:37:32.562Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.blingfeng.cn/project/index.html</loc>
     
     <lastmod>2017-06-24T04:24:55.814Z</lastmod>
@@ -44,16 +37,30 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/about/index.html</loc>
+    <loc>http://www.blingfeng.cn/2017/06/23/my-first-post/</loc>
     
-    <lastmod>2017-06-24T04:21:18.081Z</lastmod>
+    <lastmod>2017-06-24T02:04:46.397Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/2017/06/23/my-first-post/</loc>
+    <loc>http://www.blingfeng.cn/about/index.html</loc>
     
-    <lastmod>2017-06-24T02:04:46.397Z</lastmod>
+    <lastmod>2016-12-07T13:21:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.blingfeng.cn/categories/index.html</loc>
+    
+    <lastmod>2016-12-07T13:21:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.blingfeng.cn/tags/index.html</loc>
+    
+    <lastmod>2016-12-07T13:21:39.000Z</lastmod>
     
   </url>
   
