@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     
-    <title>blingfeng</title>
+    <title>标签: Hibernate | blingfeng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:type" content="website">
 <meta property="og:title" content="blingfeng">
-<meta property="og:url" content="http://www.blingfeng.cn/index.html">
+<meta property="og:url" content="http://www.blingfeng.cn/tags/Hibernate/index.html">
 <meta property="og:site_name" content="blingfeng">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="blingfeng">
@@ -186,21 +186,24 @@
 
             
             <section id="main">
-    <article id="post-Hibernate中对象的三种状态" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
+<div class="timeline timeline-wrap">
+    <div class="timeline-row timeline-row-major">
+        <span class="node"><i class="fa fa-tag"></i></span>
+        <h1 class="title">#Hibernate</h1>
+    </div>
+    
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/07/05/Hibernate中对象的三种状态/">Hibernate中对象的三种状态</a>
+            <a class="timeline-article-title" href="/2017/07/05/Hibernate中对象的三种状态/">Hibernate中对象的三种状态</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2017/07/05/Hibernate中对象的三种状态/">
@@ -209,194 +212,23 @@
     </div>
 
 
-                        
+                    
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/Hibernate/">Hibernate</a>
     </div>
 
-                        
+                    
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/Hibernate/">Hibernate</a>, <a class="tag-link" href="/tags/框架/">框架</a>, <a class="tag-link" href="/tags/状态/">状态</a>
     </div>
 
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>在hibernate的对象中有三种状态：<u><b>瞬时状态，持久化状态，游离状态</b></u>。</p>
-<p>当hibernate对象无id，没有与session绑定时，为瞬时状态。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Product product=<span class="keyword">new</span> Product();</div><div class="line">product.setPname(<span class="string">"联想"</span>);<span class="comment">//瞬时状态</span></div></pre></td></tr></table></figure>
-<p>当hibernate对象有id且与session绑定时，为持久化状态。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Product product=<span class="keyword">new</span> Product();</div><div class="line">product.setPname(<span class="string">"联想"</span>);</div><div class="line">session.save(product);<span class="comment">//持久化状态</span></div></pre></td></tr></table></figure></p>
-<p>当hibernate对象有id没有与session绑定时为游离状态。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">session.save(product);</div><div class="line">session.close();<span class="comment">//游离状态</span></div></pre></td></tr></table></figure></p>
-<p>瞬时状态和游离状态都可转化为持久化状态（save/update）saveOrupdate方法可以让我们不用区分它们的状态。</p>
-<p>所以很容易得出当session调用get方法时，获得的对象为持久化状态，当对其进行修改时，会同步到数据库。</p>
-
-        
+                </div>
+            </div>
         </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-    <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+    
 </div>
-<script>
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<style>
-    .bdshare_popup_box {
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .bdshare-button-style0-16 a,
-    .bdshare-button-style0-16 .bds_more {
-        padding-left: 20px;
-        margin: 6px 10px 6px 0;
-    }
-    .bdshare_dialog_list a,
-    .bdshare_popup_list a,
-    .bdshare_popup_bottom a {
-        font-family: 'Microsoft Yahei';
-    }
-    .bdshare_popup_top {
-        display: none;
-    }
-    .bdshare_popup_bottom {
-        height: auto;
-        padding: 5px;
-    }
-</style>
-
-
-</div>
-
-            
-    
-        <a href="http://www.blingfeng.cn/2017/07/05/Hibernate中对象的三种状态/#comments" class="article-comment-link">评论</a>
-    
-
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-music" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2017/06/24/music/">music</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/06/24/music/">
-            <time datetime="2017-06-24T02:03:42.000Z" itemprop="datePublished">2017-06-24</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/music/">music</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/music/share/">share</a>
-    </div>
-
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/双苼/">双苼</a>, <a class="tag-link" href="/tags/唢那/">唢那</a>, <a class="tag-link" href="/tags/封茗囧菌/">封茗囧菌</a>, <a class="tag-link" href="/tags/音乐/">音乐</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><p><a href="http://baike.baidu.com/link?url=oa_H4BoByL2h3anSHUS_iBW9oc2d0fFQ79A_v6iByhBFTRbPHcbbZla0nvwfUWNEtnhM-3yvz218gTD1KRbERGiEbtnn5HzP6l1K-LSwNgcN_L9HbP5lcUyFUvS-sYEw" style="color:#FFB90F" target="_blank" rel="external">囧菌</a>的<font color="#0099ff">《哥哥呀》</font></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="300" height="86" src="http://music.163.com/outchain/player?type=2&id=478138755&auto=0&height=66"></iframe><br></p>
-            <p class="article-more-link">
-                <a href="/2017/06/24/music/#more">查看更多</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-    <div class="bdsharebuttonbox">
-    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
-    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
-    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
-</div>
-<script>
-window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-<style>
-    .bdshare_popup_box {
-        border-radius: 4px;
-        border: #e1e1e1 solid 1px;
-    }
-    .bdshare-button-style0-16 a,
-    .bdshare-button-style0-16 .bds_more {
-        padding-left: 20px;
-        margin: 6px 10px 6px 0;
-    }
-    .bdshare_dialog_list a,
-    .bdshare_popup_list a,
-    .bdshare_popup_bottom a {
-        font-family: 'Microsoft Yahei';
-    }
-    .bdshare_popup_top {
-        display: none;
-    }
-    .bdshare_popup_bottom {
-        height: auto;
-        padding: 5px;
-    }
-</style>
-
-
-</div>
-
-            
-    
-        <a href="http://www.blingfeng.cn/2017/06/24/music/#comments" class="article-comment-link">评论</a>
-    
-
-
-        </footer>
-    </div>
-    
-</article>
-
-
 </section>
             
                 <aside id="sidebar">
