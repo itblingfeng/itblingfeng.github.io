@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.blingfeng.cn/2017/07/10/hibernate3-Configuration%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2017-07-10T12:30:34.316Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.blingfeng.cn/2017/07/05/Hibernate%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81/</loc>
     
     <lastmod>2017-07-05T12:02:21.444Z</lastmod>
@@ -37,14 +44,14 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/about/index.html</loc>
+    <loc>http://www.blingfeng.cn/categories/index.html</loc>
     
     <lastmod>2016-12-07T13:21:39.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/categories/index.html</loc>
+    <loc>http://www.blingfeng.cn/about/index.html</loc>
     
     <lastmod>2016-12-07T13:21:39.000Z</lastmod>
     
