@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://www.blingfeng.cn/2017/07/10/hibernate3-Configuration源码学习/index.html">
 <meta property="og:site_name" content="blingfeng">
 <meta property="og:description" content="Configuration作为hibernate的入口，我们有必要研究一下它的源码，首先Configuration中提供了三个configure方法，分别是无参，参数为字符串，参数为URL的方法。1234567891011121314public Configuration configure() throws HibernateException &amp;#123;       return this">
-<meta property="og:updated_time" content="2017-07-10T12:32:52.649Z">
+<meta property="og:updated_time" content="2017-07-25T11:26:30.566Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hibernate3-Configuration源码学习">
 <meta name="twitter:description" content="Configuration作为hibernate的入口，我们有必要研究一下它的源码，首先Configuration中提供了三个configure方法，分别是无参，参数为字符串，参数为URL的方法。1234567891011121314public Configuration configure() throws HibernateException &amp;#123;       return this">
@@ -139,11 +139,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                3
+                4
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                8
+                10
                 <span>标签</span>
             </div>
         </div>
@@ -235,6 +235,7 @@
         
             
             <p>Configuration作为hibernate的入口，我们有必要研究一下它的源码，首先Configuration中提供了三个configure方法，分别是无参，参数为字符串，参数为URL的方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Configuration <span class="title">configure</span><span class="params">()</span> <span class="keyword">throws</span> HibernateException </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.configure(<span class="string">"hibernate.cfg.xml"</span>);</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="function"><span class="keyword">public</span> Configuration <span class="title">configure</span><span class="params">(String resource)</span> <span class="keyword">throws</span> HibernateException </span>&#123;</div><div class="line">       <span class="keyword">this</span>.standardServiceRegistryBuilder.configure(resource);</div><div class="line">       <span class="keyword">this</span>.properties.putAll(<span class="keyword">this</span>.standardServiceRegistryBuilder.getSettings());</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">   &#125;</div><div class="line"><span class="function"><span class="keyword">public</span> Configuration <span class="title">configure</span><span class="params">(URL url)</span> <span class="keyword">throws</span> HibernateException </span>&#123;</div><div class="line">       <span class="keyword">this</span>.standardServiceRegistryBuilder.configure(url);</div><div class="line">       <span class="keyword">this</span>.properties.putAll(<span class="keyword">this</span>.standardServiceRegistryBuilder.getSettings());</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <p>无参方法体中调用参数为字符串的方法，并将”<b>hibernate.cfg.xml”</b>作为参数传入。那么我们可以直接分析参数为字符串的方法。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> Configuration <span class="title">configure</span><span class="params">()</span> <span class="keyword">throws</span> HibernateException </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.configure(<span class="string">"hibernate.cfg.xml"</span>);</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
 <p>该方法中调用standardServiceRegistryBuilder中的configure方法，将主配置文件名作为参数参入。该方法会调用该类中的参数为LoadedConfig对象的configure方法。loadConfigXmlResource方法中传入主配置文件名。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> StandardServiceRegistryBuilder <span class="title">configure</span><span class="params">(String resourceName)</span> </span>&#123;</div><div class="line">       <span class="keyword">return</span> <span class="keyword">this</span>.configure(<span class="keyword">this</span>.configLoader.loadConfigXmlResource(resourceName));</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
@@ -300,6 +301,15 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         
 <nav id="article-nav">
     
+        <a href="/2017/07/25/Idea下创建MAVEN工程/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    Idea下创建MAVEN工程
+                
+            </div>
+        </a>
+    
     
         <a href="/2017/07/05/Hibernate中对象的三种状态/" id="article-nav-older" class="article-nav-link-wrap">
             <strong class="article-nav-caption">下一篇</strong>
@@ -332,6 +342,25 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/07/25/Idea下创建MAVEN工程/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/MAVEN/">MAVEN</a></p>
+                            <p class="item-title"><a href="/2017/07/25/Idea下创建MAVEN工程/" class="title">Idea下创建MAVEN工程</a></p>
+                            <p class="item-date"><time datetime="2017-07-25T11:05:58.000Z" itemprop="datePublished">2017-07-25</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -399,7 +428,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/Configuration/">Configuration</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/music/">music</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/music/share/">share</a><span class="category-list-count">1</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/">Hibernate</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hibernate/Configuration/">Configuration</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAVEN/">MAVEN</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/music/">music</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/music/share/">share</a><span class="category-list-count">1</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -408,7 +437,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">七月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">六月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -417,7 +446,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/双苼/">双苼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/唢那/">唢那</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/封茗囧菌/">封茗囧菌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/源码/">源码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状态/">状态</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/">Hibernate</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Idea/">Idea</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAVEN/">MAVEN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/双苼/">双苼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/唢那/">唢那</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/封茗囧菌/">封茗囧菌</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/框架/">框架</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/源码/">源码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/状态/">状态</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/音乐/">音乐</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -427,7 +456,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 <div class="widget-wrap">
     <h3 class="widget-title">tagcloud</h3>
     <div class="widget tagcloud">
-        <a href="/tags/框架/" style="font-size: 23px; color: #f00">框架</a> <a href="/tags/Hibernate/" style="font-size: 23px; color: #f00">Hibernate</a> <a href="/tags/状态/" style="font-size: 13px; color: #a133ff">状态</a> <a href="/tags/源码/" style="font-size: 13px; color: #a133ff">源码</a> <a href="/tags/音乐/" style="font-size: 13px; color: #a133ff">音乐</a> <a href="/tags/封茗囧菌/" style="font-size: 13px; color: #a133ff">封茗囧菌</a> <a href="/tags/双苼/" style="font-size: 13px; color: #a133ff">双苼</a> <a href="/tags/唢那/" style="font-size: 13px; color: #a133ff">唢那</a>
+        <a href="/tags/Idea/" style="font-size: 13px; color: #a133ff">Idea</a> <a href="/tags/MAVEN/" style="font-size: 13px; color: #a133ff">MAVEN</a> <a href="/tags/框架/" style="font-size: 23px; color: #f00">框架</a> <a href="/tags/Hibernate/" style="font-size: 23px; color: #f00">Hibernate</a> <a href="/tags/状态/" style="font-size: 13px; color: #a133ff">状态</a> <a href="/tags/源码/" style="font-size: 13px; color: #a133ff">源码</a> <a href="/tags/音乐/" style="font-size: 13px; color: #a133ff">音乐</a> <a href="/tags/封茗囧菌/" style="font-size: 13px; color: #a133ff">封茗囧菌</a> <a href="/tags/双苼/" style="font-size: 13px; color: #a133ff">双苼</a> <a href="/tags/唢那/" style="font-size: 13px; color: #a133ff">唢那</a>
     </div>
 </div>
 
@@ -435,7 +464,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-        <a href="/tags/Hibernate/" style="font-size: 20px;">Hibernate</a> <a href="/tags/双苼/" style="font-size: 10px;">双苼</a> <a href="/tags/唢那/" style="font-size: 10px;">唢那</a> <a href="/tags/封茗囧菌/" style="font-size: 10px;">封茗囧菌</a> <a href="/tags/框架/" style="font-size: 20px;">框架</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/状态/" style="font-size: 10px;">状态</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
+        <a href="/tags/Hibernate/" style="font-size: 20px;">Hibernate</a> <a href="/tags/Idea/" style="font-size: 10px;">Idea</a> <a href="/tags/MAVEN/" style="font-size: 10px;">MAVEN</a> <a href="/tags/双苼/" style="font-size: 10px;">双苼</a> <a href="/tags/唢那/" style="font-size: 10px;">唢那</a> <a href="/tags/封茗囧菌/" style="font-size: 10px;">封茗囧菌</a> <a href="/tags/框架/" style="font-size: 20px;">框架</a> <a href="/tags/源码/" style="font-size: 10px;">源码</a> <a href="/tags/状态/" style="font-size: 10px;">状态</a> <a href="/tags/音乐/" style="font-size: 10px;">音乐</a>
     </div>
 </div>
 --!>
