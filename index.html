@@ -229,23 +229,13 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            
-            <p>先把zookeeper的压缩包解压到/usr/root/solr-cloud<br><img src="../img/p101.png"></p>
+            <p><p>先把zookeeper的压缩包解压到/usr/root/solr-cloud<br><img src="../img/p101.png"></p>
 <p>然后改个名字复制2份 zookeeper01 zookeeper02 zookeeper03<br>(zookeeper集群最少需要3个zookeeper，因为zookeeper投票选举leader是按超过总数一半来决定的)</p>
 <p><img src="../img/p102.png"></p>
-<p><img src="../img/p103.png"></p>
-<p>分别在每个zookeeper目录下创建data目录用来保存一些信息</p>
-<p><img src="../img/p104.png"></p>
-<p>在data目录下创建myid用于保存每个zooekeeper节点的id，用于区分<br><img src="../img/p105.png"><br>在conf目录下复制一份zoo.simple.cfg 改名为zoo.cfg 然后配置data目录和zookeeper的各节点信息（每个zookeeper目录都需要修改）</p>
-<p><img src="../img/p106.png"></p>
-<p><img src="../img/p107.png"></p>
-<p>创建运行zookeeper的命令</p>
-<p><img src="../img/p108.png"></p>
-<p><img src="../img/p109.png"></p>
-<p>添加权限<br><img src="../img/p110.png"></p>
-<p>运行,Ok</p>
-<p><img src="../img/p111.png"></p>
-
+<p><img src="../img/p103.png"><br></p>
+            <p class="article-more-link">
+                <a href="/2017/08/05/linux下zookeeper集群的搭建/#more">查看更多</a>
+            </p>
         
         </div>
         <footer class="article-footer">
