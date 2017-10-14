@@ -3,14 +3,22 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2017/6 | blingfeng</title>
+    <title>Activity工作流 | blingfeng</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="blingfeng">
-<meta property="og:url" content="http://www.blingfeng.cn/archives/2017/06/index.html">
+    <meta name="description" content="说到工作流，我们肯定第一时间想到的是JBPM和Activity，JBPM是使用Hibernate来管理数据库的，而Activity则是比较开放的贴近Mybatis的风格。而现在SSH框架用的也是越来越少了，所以Activity取代JBPM也是不远的事。 Activity的github地址:https://github.com/Activiti 一、导入依赖这里使用的是Activity的5.15.1">
+<meta name="keywords" content="工作流,web后端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Activity工作流">
+<meta property="og:url" content="http://www.blingfeng.cn/2017/10/14/Activity工作流/index.html">
 <meta property="og:site_name" content="blingfeng">
+<meta property="og:description" content="说到工作流，我们肯定第一时间想到的是JBPM和Activity，JBPM是使用Hibernate来管理数据库的，而Activity则是比较开放的贴近Mybatis的风格。而现在SSH框架用的也是越来越少了，所以Activity取代JBPM也是不远的事。 Activity的github地址:https://github.com/Activiti 一、导入依赖这里使用的是Activity的5.15.1">
+<meta property="og:image" content="http://www.blingfeng.cn/2017/10/14/img/2017101401.jpg">
+<meta property="og:image" content="http://www.blingfeng.cn/2017/10/14/img2017101402.jpg">
+<meta property="og:updated_time" content="2017-10-14T04:03:32.320Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blingfeng">
+<meta name="twitter:title" content="Activity工作流">
+<meta name="twitter:description" content="说到工作流，我们肯定第一时间想到的是JBPM和Activity，JBPM是使用Hibernate来管理数据库的，而Activity则是比较开放的贴近Mybatis的风格。而现在SSH框架用的也是越来越少了，所以Activity取代JBPM也是不远的事。 Activity的github地址:https://github.com/Activiti 一、导入依赖这里使用的是Activity的5.15.1">
+<meta name="twitter:image" content="http://www.blingfeng.cn/2017/10/14/img/2017101401.jpg">
     
 
     
@@ -186,51 +194,135 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2017</h1>
-            </div>
+            <section id="main"><article id="post-Activity工作流" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/06/24/music/">music</a>
+        <h1 class="article-title" itemprop="name">
+            Activity工作流
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/06/24/music/">
-            <time datetime="2017-06-24T02:03:42.000Z" itemprop="datePublished">2017-06-24</time>
+        <a href="/2017/10/14/Activity工作流/">
+            <time datetime="2017-10-14T04:53:04.000Z" itemprop="datePublished">2017-10-14</time>
         </a>
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/music/">music</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/music/share/">share</a>
+        <a class="article-category-link" href="/categories/web/">web</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/web/Activity/">Activity</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/双苼/">双苼</a>, <a class="tag-link" href="/tags/唢那/">唢那</a>, <a class="tag-link" href="/tags/封茗囧菌/">封茗囧菌</a>, <a class="tag-link" href="/tags/音乐/">音乐</a>
+        <a class="tag-link" href="/tags/web后端/">web后端</a>, <a class="tag-link" href="/tags/工作流/">工作流</a>
     </div>
 
-                </div>
-            </div>
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>说到工作流，我们肯定第一时间想到的是JBPM和Activity，<br>JBPM是使用Hibernate来管理数据库的，而Activity则是<br>比较开放的贴近Mybatis的风格。而现在SSH框架用的也是<br>越来越少了，所以Activity取代JBPM也是不远的事。</p>
+<p>Activity的github地址:<a href="https://github.com/Activiti/" target="_blank" rel="external">https://github.com/Activiti</a></p>
+<p></p><h2>一、导入依赖</h2><br>这里使用的是Activity的5.15.1版本<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--activity工作流依赖--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.activiti<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>activiti-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.15.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div><div class="line"><span class="comment">&lt;!-- activiti 与 Spring 集成 --&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.activiti<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>activiti-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.15.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></div></pre></td></tr></table></figure><p></p>
+<p></p><h2>二、创建流程图</h2><br>idea里面有流程图的插件:ActBPM<br>File-&gt;Settings-&gt;Plugins-&gt;搜索 ActBPM -&gt;install<br><img src="../img/2017101401.jpg"><br>接下来创建一个.bmpn文件然后画图= =<br><img src="../img2017101402.jpg"><p></p>
+<p></p><h2>三、Spring与Activity整合</h2><br>嗯，接下来和spring的整合 上面注释应该很详细了<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.activiti.spring.SpringProcessEngineConfiguration"</span> <span class="attr">id</span>=<span class="string">"processEngineConfiguration"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!--配置数据源--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"dataSource"</span> <span class="attr">ref</span>=<span class="string">"dataSource"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--数据库表更新，若数据库中不存在表，则自动创建--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"databaseSchemaUpdate"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--定时工作流--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"jobExecutorActivate"</span> <span class="attr">value</span>=<span class="string">"false"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--事务管理--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"transactionManager"</span> <span class="attr">ref</span>=<span class="string">"txManager"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--解决乱码--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"activityFontName"</span> <span class="attr">value</span>=<span class="string">"宋体"</span>/&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"labelFontName"</span> <span class="attr">value</span>=<span class="string">"宋体"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--部署流程图--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"deploymentResources"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">list</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>classpath:workflow/*.bmpn<span class="tag">&lt;/<span class="name">value</span>&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">list</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"org.activiti.spring.ProcessEngineFactoryBean"</span> <span class="attr">id</span>=<span class="string">"processEngine"</span>&gt;</span></div><div class="line">     <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"processEngineConfiguration"</span> <span class="attr">ref</span>=<span class="string">"processEngineConfiguration"</span>/&gt;</span></div><div class="line"> <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--调用processEngin中的方法 对7个服务进行注入 在service层中直接自动注入即可--&gt;</span></div><div class="line"> <span class="comment">&lt;!--任务服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"taskService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getTaskService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--表单服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"formService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getFormService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--历史数据服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"historyService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getHistoryService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--身份认证服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"identityService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getIdentityService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--数据存储服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"repositoryService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getRepositoryService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--管理服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"managementService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getManagementService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div><div class="line"> <span class="comment">&lt;!--运行时服务--&gt;</span></div><div class="line"> <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"runtimeService"</span> <span class="attr">factory-bean</span>=<span class="string">"processEngine"</span> <span class="attr">factory-method</span>=<span class="string">"getRuntimeService"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></div></pre></td></tr></table></figure><p></p>
+<p></p><h2>四、小demo</h2><br>接下来把controller层代码写下 service层调上面注入的bean的方法，写一堆对应你业务逻辑的东西就ok了。<br>小demo有没有你心里没点逼数吗？ヽ(°◇° )ノ<p></p>
+
+        
         </div>
-    
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
 </div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
+            
+    
+        <a href="http://www.blingfeng.cn/2017/10/14/Activity工作流/#comments" class="article-comment-link">评论</a>
+    
+
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/08/05/linux下zookeeper集群的搭建/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">linux下zookeeper集群的搭建</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+<div id="uyan_frame"></div>
+
+    
+    </section>
+
+
 </section>
             
                 <aside id="sidebar">
