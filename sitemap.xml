@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.blingfeng.cn/2017/10/20/Spring%E4%B8%8B%E7%9A%84Shiro%E6%9D%83%E9%99%90%E6%A1%86%E6%9E%B6/</loc>
+    
+    <lastmod>2017-10-20T00:33:16.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.blingfeng.cn/2017/10/14/Activity%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
     
     <lastmod>2017-10-14T04:39:27.932Z</lastmod>
@@ -9,7 +16,14 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/tags/index.html</loc>
+    <loc>http://www.blingfeng.cn/2017/07/05/Hibernate%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81/</loc>
+    
+    <lastmod>2017-09-29T09:57:32.434Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.blingfeng.cn/2017/07/25/Idea%E4%B8%8B%E5%88%9B%E5%BB%BAMAVEN%E5%B7%A5%E7%A8%8B/</loc>
     
     <lastmod>2017-09-29T09:57:32.434Z</lastmod>
     
@@ -30,21 +44,7 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/2017/07/05/Hibernate%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E7%A7%8D%E7%8A%B6%E6%80%81/</loc>
-    
-    <lastmod>2017-09-29T09:57:32.434Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.blingfeng.cn/2017/06/24/music/</loc>
-    
-    <lastmod>2017-09-29T09:57:32.434Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.blingfeng.cn/2017/07/25/Idea%E4%B8%8B%E5%88%9B%E5%BB%BAMAVEN%E5%B7%A5%E7%A8%8B/</loc>
+    <loc>http://www.blingfeng.cn/tags/index.html</loc>
     
     <lastmod>2017-09-29T09:57:32.434Z</lastmod>
     
@@ -58,7 +58,14 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/category/index-1.html</loc>
+    <loc>http://www.blingfeng.cn/2017/06/24/music/</loc>
+    
+    <lastmod>2017-09-29T09:57:32.434Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.blingfeng.cn/about/index.html</loc>
     
     <lastmod>2017-09-29T09:57:32.403Z</lastmod>
     
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/categories/index.html</loc>
+    <loc>http://www.blingfeng.cn/category/index-1.html</loc>
     
     <lastmod>2017-09-29T09:57:32.403Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.blingfeng.cn/about/index.html</loc>
+    <loc>http://www.blingfeng.cn/categories/index.html</loc>
     
     <lastmod>2017-09-29T09:57:32.403Z</lastmod>
     
